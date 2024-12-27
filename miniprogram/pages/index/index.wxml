@@ -1,0 +1,85 @@
+<!-- index.wxml -->
+<view class="container">
+  <!-- 头部区域 -->
+  <view class="header">
+      <view class="header-left">
+        <button class="header-button" bindtap="handleSettings">
+          <text class="header-icon">⚙</text>
+        </button>
+      </view>
+    <view class="header-middle">
+        <text class="header-title">上位机控制台</text>
+    </view>
+    <view class="header-right">
+      <button class="header-button" bindtap="handleConnection">
+        <text class="header-icon"> 📶</text>
+      </button>
+    </view>
+  </view>
+  <!-- 功能模块区域 -->
+  <scroll-view scroll-y="true" class="content">
+    <!-- 状态显示模块 -->
+    <view class="module">
+      <view class="module-title">状态显示</view>
+      <view class="status-display">
+        <view class="status-item">
+          <text class="status-label">设备状态:</text>
+          <text class="status-value">{{deviceStatus}}</text>
+        </view>
+        <view class="status-item">
+          <text class="status-label">连接状态:</text>
+          <text class="status-value">{{connectionStatus}}</text>
+        </view>
+      </view>
+    </view>
+    <!-- 控制模块 -->
+    <view class="module">
+      <view class="module-title">控制模块</view>
+      <view class="control-buttons">
+          <view class="control-row">
+              <button class="control-button" bindtap="handleButtonA">A</button>
+            <button class="control-button" bindtap="handleButtonB">B</button>
+          </view>
+           <view class="control-row">
+            <button class="control-button" bindtap="handleButtonC">C</button>
+           <button class="control-button" bindtap="handleButtonD">D</button>
+          </view>
+      </view>
+    </view>
+    <!-- 数据显示模块 -->
+    <view class="module">
+      <view class="module-title">数据监控</view>
+      <view class="data-display">
+        <view class="data-item" wx:for="{{dataList}}" wx:key="index">
+          <text class="data-label">{{item.label}}:</text>
+          <text class="data-value">{{item.value}}</text>
+        </view>
+      </view>
+    </view>
+    <!-- 输入模块 -->
+    <view class="module">
+      <view class="module-title">输入指令</view>
+      <view class="input-area">
+        <input class="input" type="text" placeholder="请输入指令" bindinput="handleInputChange" value="{{inputValue}}" />
+        <button class="action-button" bindtap="handleSendInput">发送</button>
+      </view>
+    </view>
+    <!-- 附加功能模块 -->
+    <view class="module">
+      <view class="module-title">附加功能</view>
+      <view class="action-buttons">
+        <button class="action-button" bindtap="handleButtonE">功能 E</button>
+        <button class="action-button" bindtap="handleButtonF">功能 F</button>
+      </view>
+    </view>
+    <!-- 日志模块 -->
+    <view class="module">
+      <view class="module-title">日志信息</view>
+      <view class="log-display">
+        <scroll-view scroll-y="true" style="height: 150px;">
+          <view wx:for="{{logMessages}}" wx:key="index" class="log-item">{{item}}</view>
+        </scroll-view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

@@ -1,0 +1,157 @@
+/* index.wxss */
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #f5f5f5;
+}
+/* 头部样式 */
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.header-left,
+.header-right {
+  display: flex;
+  align-items: center;
+  width: 40px;
+}
+.header-middle {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.header-title {
+  font-size: 20px;
+  font-weight: bold;
+  white-space: nowrap; /* 确保标题不换行 */
+  text-align: center; /* 确保标题居中 */
+}
+.header-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-icon {
+  font-size: 24px;
+}
+/* 内容区域 */
+.content {
+  flex: 1;
+  overflow-y: scroll;
+  padding: 10px;
+}
+.module {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+  padding: 15px;
+}
+.module-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+/* 状态显示 */
+.status-display{
+  display: flex;
+  flex-direction: column;
+}
+.status-item {
+  display: flex;
+  margin-bottom: 8px;
+}
+.status-label {
+  font-weight: bold;
+  margin-right: 5px;
+}
+/* 控制按钮样式 */
+.control-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.control-row{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.control-button {
+  width: 50px;
+  height: 50px;
+  background-color: #3498db;
+  color: #fff;
+  border-radius: 50%;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+}
+.control-button:active {
+  background-color: #2980b9;
+}
+/* 数据显示 */
+.data-display{
+  display: flex;
+  flex-direction: column;
+}
+.data-item{
+  display: flex;
+  margin-bottom: 8px;
+}
+.data-label{
+  font-weight: bold;
+  margin-right: 5px;
+}
+/* 日志显示 */
+.log-display{
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+.log-item{
+  font-size: 14px;
+  line-height: 1.5;
+}
+/* 输入模块样式 */
+.input-area{
+  display: flex;
+  align-items: center;
+}
+.input{
+  flex: 1;
+  padding: 8px;
+  margin-right: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.module .action-button{
+  background-color: #3498db;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 5px;
+  border: none;
+  margin-top: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+/* 附加功能 */
+.action-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
